@@ -16,6 +16,18 @@
       <br>
       <h3 id="top">Latest Updates</h3>
       <br>
+      <h5 id="top">UEFI Headless Booting is Fixed! CTRL-ALT-DEL added!</h5>(2017.03.19)
+      <p>
+         While the headless boot fix mainly affects Chromebox users, it also prevents the UEFI firmware from hanging when the display init either fails or takes longer than expected/allowed.<br>
+          <br>
+          We've also updated the EC firmware on Haswell/Broadwell/Baytrail Chromebooks to send CTRL-ALT-DEL when the left CTRL and left ALT keys are held, and backspace is pressed.  This mainly benefits Windows users but is useful in many other cases as well.  The EC firmware has also a fix where the keyboard could fail to init properly if the keys were pressed (read: walked on by your cat) in between the firmware loaded and Linux re-initializing the keyboard.<br>
+          <br>
+          Lastly, Baytrail devices got some tweaks to the audio device which should allow them to have functional audio under Windows once coolstar finishes writing the codec driver.  After this update, Windows will identify and load the driver for the SST audio device, and will show the volume control on the taskbar, but sound will not yet be functional.  Keep an eye out on <a href="https://www.reddit.com/r/chrultrabook" target="_blank">/r/chrultrabook</a> for the driver release announcement (and please don't ask when it will be done / if you can help test - we've got everything we need ATM).  Linux users are unaffected; audio is working for Baytrail in GalliumOS, and should work in other distros once kernel 4.11 is released, assuming the distro's kernel is configured to load the driver.
+       </p>
+      <p>As usual, the full list of changes can be found <a href="https://github.com/MattDevo/coreboot/commits/2017.03.19" target="_blank">on my github repos</a>.
+      </p>
+      <p>
+      <br>
       <h5 id="top">EC Firmware updates For Everyone! (almost)</h5>(2017.02.21)
       <p>
          The big feature in this release is that we're now able to update not only the main system firmware, but also the firmware for the embedded controller (EC) on Chromebooks as well.  This has a few immediate benefits:<br>
