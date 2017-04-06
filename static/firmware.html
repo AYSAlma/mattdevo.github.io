@@ -25,7 +25,7 @@
             <li>On many models, includes bugfixes and enables additional functionality</li>
           </ul>
           <p>
-            The <strong>RW_LEGACY</strong> firmware is for users who want to dual-boot ChromeOS + Linux/Windows, or users who want to run Linux/Windows without having to open the device/disable the firmware write-protect (and are ok with the accompanying limitations).
+            The <strong>RW_LEGACY</strong> firmware is for users who want to dual-boot ChromeOS + Linux, or users who want to run Linux without having to open the device/disable the firmware write-protect (and are ok with the accompanying limitations).
           </p>
       </li>
       <br>
@@ -52,13 +52,14 @@
       <br>
       <li><strong>Full ROM</strong>
         <ul>
-          <li>A complete firmware image which includes updated/customized versions of the hardware init  (coreboot) and legacy boot payload (SeaBIOS) components contained in the stock firmware; some devices have the option of a UEFI-compatible firmware also, which replaces the legacy boot component with a UEFI boot one (Tianocore)</li>
+          <li>A complete firmware image which includes updated/customized versions of the hardware init (coreboot) and legacy boot payload (SeaBIOS) components contained in the stock firmware; most devices have the option of a UEFI-compatible firmware also, which replaces the legacy boot component with a UEFI compatible one (Tianocore)</li>
           <li>Removes the developer mode boot (white "OS verification is OFF") screen</li>
           <li>Completely removes the ability to run ChromeOS (and ChromeOS Recovery Mode), creating a small risk of bricking your device</li>
           <li>Offers the best support for booting all OSes besides ChromeOS</li>
           <li>On many models, adds full hardware support for virtualization (vmx / VT-x)</li>
-          <li>Fixes many bugs and/or idiosyncrasies associated with the stock firmware (but could potentially add new ones)</li>
-          <li>Essentially turns your ChromeOS device into a "regular" PC / laptop</li>
+          <li>Fixes many bugs and/or idiosyncrasies associated with the stock firmware (but could potentially add new ones)</li>
+          <li>UEFI firmware contains updated EC firmware as well, which brings additional fixes on most Chromebooks (mainly keyboard related)</li>
+          <li>Essentially turns your ChromeOS device into a "regular" PC / laptop</li>
         </ul>
         <p>
           The <strong>Full ROM</strong> firmware is the best option for users who want to run Linux/Windows exclusively, and who don't mind opening their device to disable the firmware write-protect.
@@ -66,7 +67,7 @@
       </li>
     </ul>
     <p> 
-      <br>All three firmware update types are available via the <a href="javascript:document.getElementById('fwscript').click()">ChromeOS Firmware Utility Script</a>, though not all types are available for all devices.
+      <br>All three firmware update types are available via the <a href="https://mrchromebox.tech/#fwscript">ChromeOS Firmware Utility Script</a>, though not all types are available for all devices.  See the <a href="https://mrchromebox.tech/#devices">Device Compatibility list</a> for full details.
     </p>
     <br>
     <h3>ChromeOS Firmware Boot Flags (GBB Flags)</h3>
@@ -101,7 +102,7 @@
       <a href="https://github.com/coreboot/seabios" target="_blank">https://github.com/coreboot/seabios</a><br>
     </p>
     <p>
-      My personal coreboot and SeaBIOS repositories, along with the source for the scripts on this site, are also available on github:<br>
+      My personal coreboot, SeaBIOS, Tianocore, and EC firmware repositories, along with the source for the scripts on this site, are also available on github:<br>
       <br>
       <a href="https://github.com/MattDevo/coreboot" target="_blank">https://github.com/MattDevo/coreboot</a><br>
       <a href="https://github.com/MattDevo/SeaBIOS" target="_blank">https://github.com/MattDevo/SeaBIOS</a><br>
